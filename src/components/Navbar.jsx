@@ -1,8 +1,10 @@
 import { navLinks, navIcons } from "@constants";
 import { useCurrentTime } from "@hooks/useCurrentTime";
+import useWindowStore from "@store/window";
 
 const Navbar = () => {
   const currentTime = useCurrentTime();
+  const {openWindow} = useWindowStore();
   return (
     <nav>
       <div>
@@ -10,8 +12,10 @@ const Navbar = () => {
         <p className="font-bold">Gyanendra's Portfoilo</p>
 
         <ul>
-          {navLinks.map((item) => (
-            <li key={item.id}>{item.name}</li>
+          {navLinks.map(({ id, name, type }) => (
+            <li key={id} onClick={() => openWindow(type)}>
+              <p>{name}</p>
+            </li>
           ))}
         </ul>
       </div>
