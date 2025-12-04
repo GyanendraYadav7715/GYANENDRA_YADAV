@@ -1,12 +1,24 @@
 import { Tooltip } from "react-tooltip";
 import { dockApps } from "@constants";
 import { useDockAnimation } from "@hooks/useDockAnimation";
+import useWindowStore from "@store/window";
 
 const Dock = () => {
+  const { openWindow, closeWindow, windows } = useWindowStore();
   const dockRef = useDockAnimation();
 
   const toggleApp = (app) => {
-    // Function to handle opening the app
+    if (!app.canOpen) return;
+
+    const win = windows[app.id];
+
+    if (win?.isOpen) {
+      closeWindow(app.id);
+    } else {
+      openWindow(app.id);
+    }
+
+    console.log("Windows state:", windows);
   };
 
   return (
