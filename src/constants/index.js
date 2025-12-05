@@ -76,19 +76,45 @@ const dockApps = [
         id: "app_store",
         name: "Apps",
         icon: "app_store.png",
-        canOpen: false,
+        canOpen: true,
     }
 ];
 
-const apps = [
-    {
-        id: "photos",
-        name: "Gallery",
-        icon: "photos.png",
-        canOpen: true,
-    },
-]
+const macOSApps = [
+    // Page 1 - Productivity
+    [
+        { id: "finder", name: "Finder", icon: "finder.png", canOpen: true },
+        { id: "safari", name: "Safari", icon: "safari.png", canOpen: true },
+        { id: "mail", name: "Mail", icon: "mail.png", canOpen: false },
+        { id: "messages", name: "Messages", icon: "messages.png", canOpen: false },
+        { id: "facetime", name: "FaceTime", icon: "facetime.png", canOpen: false },
+        { id: "calendar", name: "Calendar", icon: "calendar.png", canOpen: false },
+        { id: "contacts", name: "Contacts", icon: "contact.png", canOpen: true },
+        { id: "notes", name: "Notes", icon: "notes.png", canOpen: false },
+        { id: "reminders", name: "Reminders", icon: "reminders.png", canOpen: false, },
+        { id: "maps", name: "Maps", icon: "maps.png", canOpen: false },
+        { id: "photos", name: "Photos", icon: "photos.png", canOpen: true },
+        { id: "music", name: "Music", icon: "music.png", canOpen: false },
+    ],
+    [
+        { id: "terminal", name: "Terminal", icon: "terminal.png", canOpen: true },
+        { id: "vscode", name: "VCode", icon: "vscode.png", canOpen: false },
+        { id: "postman", name: "Postman", icon: "postman_macos.png", canOpen: false },
+        { id: "mongodb", name: "MongoDB", icon: "mongodb_compass.png", canOpen: false },
+        { id: "mysql", name: "MySQL", icon: "mysql_workbench.png", canOpen: false },
+        { id: "intellij", name: "IntelliJ", icon: "intellij.png", canOpen: false },
+        { id: "web-strom", name: "WebStorm", icon: "webstorm .png", canOpen: false },
 
+        { id: "calculator", name: "Calculator", icon: "calculator.png", canOpen: false, },
+        { id: "settings", name: "Settings", icon: "settings.png", canOpen: false },
+        {
+            id: "app_store",
+            name: "App Store",
+            icon: "app_store.png",
+            canOpen: true,
+        },
+    ],
+];
 const blogPosts = [
     {
         id: 1,
@@ -228,7 +254,7 @@ export {
     socials,
     photosLinks,
     gallery,
-    apps
+    macOSApps
 };
 
 const WORK_LOCATION = {
@@ -517,6 +543,7 @@ const WINDOW_CONFIG = {
     terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    app_store: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };
