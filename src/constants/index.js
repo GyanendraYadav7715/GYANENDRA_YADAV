@@ -72,7 +72,22 @@ const dockApps = [
         icon: "trash.png",
         canOpen: false,
     },
+    {
+        id: "app_store",
+        name: "Apps",
+        icon: "app_store.png",
+        canOpen: false,
+    }
 ];
+
+const apps = [
+    {
+        id: "photos",
+        name: "Gallery",
+        icon: "photos.png",
+        canOpen: true,
+    },
+]
 
 const blogPosts = [
     {
@@ -213,6 +228,7 @@ export {
     socials,
     photosLinks,
     gallery,
+    apps
 };
 
 const WORK_LOCATION = {
