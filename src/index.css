@@ -393,4 +393,35 @@ body {
             }
         }
     }
+
+    #app_store {
+        @apply w-4xl absolute top-32 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+        .search {
+                @apply flex items-center gap-3 w-2/3 bg-white border border-gray-300 rounded-lg px-3 py-2;
+        
+                input {
+                    @apply placeholder:text-gray-400;
+                }
+            }
+        
+        h2 {
+            @apply font-bold text-sm text-center w-full;
+        }
+
+        .app-gallery {
+            @apply p-10 grid grid-cols-4 gap-5;
+
+            .app-item {
+                @apply flex flex-col items-center gap-3 cursor-pointer hover:bg-gray-100 rounded-lg p-5 transition-all;
+
+                img {
+                    @apply size-16 object-contain;
+                }
+
+                p {
+                    @apply text-sm font-medium;
+                }
+            }
+        }
+    }
 }

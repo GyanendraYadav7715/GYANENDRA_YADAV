@@ -18,7 +18,7 @@ const Dock = () => {
       openWindow(app.id);
     }
 
-    console.log("Windows state:", windows);
+    // console.log("Windows state:", windows);
   };
 
   return (
