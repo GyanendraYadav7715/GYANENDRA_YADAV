@@ -7,5 +7,6 @@ import Image from "./Image";
 import Contact from "./Contact";  
 import AllApp from "./App";
 import Photos from "./Photos";
+import Trash from "./Trash";
 
-export { Terminal, Safari, Resume, Finder, Text, Image, Contact, AllApp, Photos };
+export { Terminal, Safari, Resume, Finder, Text, Image, Contact, AllApp, Photos, Trash };
